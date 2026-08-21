@@ -45,8 +45,8 @@
   align-items: center;
   justify-content: center;
 
-  width: 206px;
-  height: 75px;
+  width: 160px;
+  height: 58px;
 
   background: #efa92f;
   border: none;
@@ -74,10 +74,10 @@
   margin: 0;
 
   font-family: var(--font-mono);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
 
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
 
   color: #000000;
 }
@@ -608,18 +608,18 @@
   /* Button */
 
   .about-title-box {
-    width: 206px;
+    width: 160px;
 
-    height: 75px;
+    height: 58px;
 
-    border-radius: 14px;
+    border-radius: 12px;
   }
 
 
   /* Button Text */
 
   .about-title-box .eyebrow {
-    font-size: 18px;
+    font-size: 14px;
 
     letter-spacing: 0.14em;
   }
@@ -746,16 +746,16 @@
   /* About Button */
 
   .about-title-box {
-    width: 190px;
+    width: 145px;
 
-    height: 68px;
+    height: 52px;
 
-    border-radius: 13px;
+    border-radius: 11px;
   }
 
 
   .about-title-box .eyebrow {
-    font-size: 16px;
+    font-size: 12px;
 
     letter-spacing: 0.13em;
   }

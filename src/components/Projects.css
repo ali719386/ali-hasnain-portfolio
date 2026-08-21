@@ -87,6 +87,24 @@
 
 
 /* ================================
+   STATUS CHIP — force AI/CV badge
+   to match FINAL YEAR PROJECT (amber)
+================================ */
+
+.status-live {
+  color: var(--teal) !important;
+  background: rgba(79, 182, 164, 0.12) !important;
+  border-color: rgba(79, 182, 164, 0.35) !important;
+}
+
+.status-200 {
+  color: var(--teal) !important;
+  background: rgba(79, 182, 164, 0.12) !important;
+  border-color: rgba(79, 182, 164, 0.35) !important;
+}
+
+
+/* ================================
    FLAGSHIP TITLE
 ================================ */
 
@@ -96,6 +114,26 @@
   margin-top: 14px;
   position: relative;
   z-index: 1;
+  color: var(--teal);
+}
+
+.flagship h3.flagship-title-boxed {
+  display: inline-block;
+  align-self: flex-start;
+  width: fit-content;
+  margin-top: 14px;
+
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--teal);
+  background: rgba(79, 182, 164, 0.12);
+  border: 1px solid rgba(79, 182, 164, 0.35);
+  border-radius: 6px;
+  padding: 5px 12px;
 }
 
 .flagship-desc {
@@ -203,12 +241,21 @@
 }
 
 .project-card h4 {
-  font-family: var(--font-body);
+  display: inline-block;
+  align-self: flex-start;
+  width: fit-content;
 
-  font-size: 17px;
+  font-family: var(--font-mono);
+  font-size: 13px;
   font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 
-  color: var(--text-on-ink);
+  color: var(--teal);
+  background: rgba(79, 182, 164, 0.12);
+  border: 1px solid rgba(79, 182, 164, 0.35);
+  border-radius: 6px;
+  padding: 5px 12px;
 
   margin: 0;
 }

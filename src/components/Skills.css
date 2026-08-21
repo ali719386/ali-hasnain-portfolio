@@ -21,6 +21,7 @@
 }
 
 .skills-group-title{
+  position:relative;
   display:inline-block;
 
   font-family:var(--font-body);
@@ -31,8 +32,23 @@
 
   padding-bottom:4px;
   margin-bottom:18px;
+}
 
-  border-bottom:2px solid rgba(79,182,164,.4);
+.skills-group-title::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:0;
+  transform:translateX(-50%);
+  width:0;
+  height:2px;
+  border-radius:2px;
+  background:linear-gradient(90deg, var(--teal), var(--amber));
+  transition:width .25s ease;
+}
+
+.skills-group-title:hover::after{
+  width:70%;
 }
 
 .skills-icons{

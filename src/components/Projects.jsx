@@ -69,6 +69,8 @@ export default function Projects() {
 
         <div className="flagship-grid">
 
+
+
           {/* EmotionSense */}
 
           <div className="flagship">
@@ -100,7 +102,7 @@ export default function Projects() {
 
             <p className="flagship-desc">
               A multimodal emotion-detection system that reads face, voice and
-              text together instead of in isolation — face via DeepFace/CNN,
+              text together instead of in isolation face via DeepFace/CNN,
               voice via a custom CNN trained on RAVDESS with librosa features,
               and text via a fine-tuned DistilRoBERTa transformer. A weighted
               confidence-fusion layer combines all three into a single read,
@@ -130,10 +132,6 @@ export default function Projects() {
 
             <div className="flagship-tag">
 
-              <span className="status-chip status-200">
-                AI / COMPUTER VISION
-              </span>
-
               <span className="flagship-live">
               
               </span>
@@ -151,7 +149,7 @@ export default function Projects() {
 
             </div>
 
-            <h3>AI Voice &amp; Gesture Control System</h3>
+            <h3 className="flagship-title-boxed">AI Voice &amp; Gesture Control System</h3>
 
             <p className="flagship-desc">
               An AI-powered desktop control system that lets users interact

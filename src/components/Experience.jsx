@@ -2,14 +2,14 @@ import './Experience.css';
 
 const LOG = [
   {
-    date: 'Nov 2025 — Jan 2026',
-    title: 'Software Engineer Intern — Sofrix',
+    date: 'Nov 2025 - Jan 2026',
+    title: 'Software Engineer Intern - Sofrix',
     body: 'Full-stack work with React and Next.js, building responsive interfaces and wiring them to backend logic. Picked up state management patterns and how a modern web app is actually architected end to end.',
     tags: ['React', 'Next.js', 'Frontend'],
   },
   {
-    date: 'Jul 2025 — Sep 2025',
-    title: 'Python Developer Intern — Code Sentinel',
+    date: 'Jul 2025 - Sep 2025',
+    title: 'Python Developer Intern - Code Sentinel',
     body: 'Backend-focused internship building web applications with Python, Django and Flask. Contributed to REST APIs and database integration, and debugged alongside senior developers with an eye on maintainable, secure code.',
     tags: ['Python', 'Django', 'Flask', 'REST APIs'],
   },
