@@ -1,0 +1,134 @@
+/* ================================
+   SKILLS GROUPS
+================================ */
+
+.skills-groups{
+  display:flex;
+  flex-direction:column;
+  gap:36px;
+
+  margin-top:28px;
+}
+
+.skills-group{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  text-align:center;
+
+  animation:skillsReveal .5s cubic-bezier(.22,1,.36,1) both;
+}
+
+.skills-group-title{
+  display:inline-block;
+
+  font-family:var(--font-body);
+  font-size:15px;
+  font-weight:700;
+
+  color:var(--teal);
+
+  padding-bottom:4px;
+  margin-bottom:18px;
+
+  border-bottom:2px solid rgba(79,182,164,.4);
+}
+
+.skills-icons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:28px;
+}
+
+.skill-chip{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  gap:8px;
+
+  width:76px;
+
+  transition:transform .2s ease;
+}
+
+.skill-chip:hover{
+  transform:translateY(-3px);
+}
+
+.skill-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:none;
+
+  width:52px;
+  height:52px;
+
+  border-radius:12px;
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--ink-line);
+}
+
+.skill-icon img{
+  width:26px;
+  height:26px;
+  object-fit:contain;
+}
+
+.icon-fallback{
+  font-family:var(--font-mono);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.02em;
+  color:var(--icon-color, #fff);
+}
+
+.skill-chip-label{
+  font-family:var(--font-body);
+  font-size:12px;
+  font-weight:600;
+  text-align:center;
+  color:var(--text-on-ink-muted);
+}
+
+
+@keyframes skillsReveal{
+  from{ opacity:0; transform:translateY(16px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width:640px){
+
+  .skills-icons{
+    gap:18px;
+    justify-content:center;
+  }
+
+  .skill-chip{
+    width:64px;
+  }
+
+  .skill-icon{
+    width:44px;
+    height:44px;
+  }
+
+}
+
+
+/* ================================
+   REDUCED MOTION
+================================ */
+
+@media (prefers-reduced-motion:reduce){
+  .skills-group{ animation:none; }
+  .skill-chip{ transition:none; }
+}

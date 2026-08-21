@@ -1,0 +1,128 @@
+.exp-cols{
+  display:grid;
+  grid-template-columns:1.5fr 1fr;
+  gap:64px;
+  align-items:start;
+}
+
+.exp-commit{
+  display:grid;
+  grid-template-columns:20px 1fr;
+  gap:20px;
+}
+.exp-commit-rail{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.exp-dot{
+  width:11px; height:11px;
+  border-radius:50%;
+  background:var(--amber);
+  box-shadow:0 0 0 4px rgba(228,163,59,0.18);
+  margin-top:6px;
+  flex-shrink:0;
+}
+.exp-line{
+  flex:1;
+  width:1px;
+  background:var(--ink-line);
+  margin-top:4px;
+}
+.exp-commit:last-child .exp-line{ display:none; }
+
+.exp-commit-body{ padding-bottom:44px; }
+.exp-commit-top{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:8px;
+}
+.exp-hash{
+  font-family:var(--font-mono);
+  font-size:12.5px;
+  color:var(--amber);
+  background:rgba(228,163,59,0.1);
+  padding:2px 7px;
+  border-radius:5px;
+}
+.exp-date{
+  font-family:var(--font-mono);
+  font-size:12.5px;
+  color:var(--text-on-ink-muted);
+}
+.exp-commit-body h3{
+  font-size:19px;
+  color:var(--text-on-ink);
+}
+.exp-commit-body p{
+  margin-top:10px;
+  color:var(--text-on-ink-muted);
+  font-size:15px;
+  max-width:520px;
+}
+.exp-tags{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+.exp-tags span{
+  font-family:var(--font-mono);
+  font-size:11.5px;
+  color:#8EA1D6;
+  border:1px solid var(--ink-line);
+  border-radius:5px;
+  padding:3px 8px;
+}
+
+.exp-edu{
+  background:var(--ink-panel);
+  border:1px solid var(--ink-line);
+  border-radius:12px;
+  padding:26px 24px;
+  position:sticky;
+  top:100px;
+}
+.exp-edu h4{
+  font-family:var(--font-mono);
+  font-size:12.5px;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  color:var(--text-on-ink-muted);
+  margin-bottom:20px;
+}
+.edu-item{
+  display:flex;
+  flex-direction:column;
+  padding:16px 0;
+  border-top:1px solid var(--ink-line);
+}
+.edu-item:first-of-type{ border-top:none; padding-top:0; }
+.edu-date{
+  font-family:var(--font-mono);
+  font-size:11.5px;
+  color:var(--amber);
+  margin-bottom:6px;
+}
+.edu-title{
+  font-size:15px;
+  font-weight:600;
+  color:var(--text-on-ink);
+}
+.edu-place{
+  font-size:13px;
+  color:var(--text-on-ink-muted);
+  margin-top:2px;
+}
+.edu-note{
+  font-size:12.5px;
+  color:var(--text-on-ink-muted);
+  margin-top:4px;
+  font-style:italic;
+}
+
+@media (max-width:900px){
+  .exp-cols{ grid-template-columns:1fr; gap:40px; }
+  .exp-edu{ position:static; }
+}
