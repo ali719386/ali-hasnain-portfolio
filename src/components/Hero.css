@@ -217,13 +217,18 @@
 
 @media (max-width:600px){
   .hero-actions{
-    gap:10px;
+    gap:12px;
+    justify-content:center;   /* center the row instead of stretching */
+    margin-top:28px;
   }
-  .hero-actions .btn-primary{
-    width:100%;
-  }
+  .hero-actions .btn-primary,
   .hero-actions .btn-icon{
-    flex:1;
+    flex:0 0 auto;            /* stop stretching to fill width */
+    width:52px;
+    height:52px;
+    min-width:52px;
+    min-height:unset;
+    padding:0;
   }
   .hero-copy .eyebrow{
     display:inline-block !important;
