@@ -225,4 +225,26 @@
   .hero-actions .btn-icon{
     flex:1;
   }
+  .hero-copy .eyebrow{
+    display:inline-block !important;
+    font-size:11px !important;
+    letter-spacing:0.02em !important;
+    padding:5px 8px !important;
+    white-space:nowrap !important;
+    max-width:100% !important;
+  }
+  .hero-lede{
+    font-size:13px !important;
+  }
+}
+
+@media (max-width:400px){
+  .hero-copy .eyebrow{
+    font-size:9.5px !important;
+    padding:4px 6px !important;
+    letter-spacing:0 !important;
+  }
+  .hero-lede{
+    font-size:12px !important;
+  }
 }

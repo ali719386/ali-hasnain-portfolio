@@ -69,8 +69,6 @@ export default function Projects() {
 
         <div className="flagship-grid">
 
-
-
           {/* EmotionSense */}
 
           <div className="flagship">
@@ -132,6 +130,8 @@ export default function Projects() {
 
             <div className="flagship-tag">
 
+              <h3 className="flagship-title-boxed">AI Voice &amp; Gesture Control System</h3>
+
               <span className="flagship-live">
               
               </span>
@@ -149,14 +149,12 @@ export default function Projects() {
 
             </div>
 
-            <h3 className="flagship-title-boxed">AI Voice &amp; Gesture Control System</h3>
-
             <p className="flagship-desc">
               An AI-powered desktop control system that lets users interact
               with their computer through natural voice commands and real-time
-              hand gestures. The system combines a modern React interface,
-              Gemini-powered AI intelligence, computer vision and a Node.js
-              system bridge to execute real-world desktop actions.
+              hand gestures. This project enables users to control computer functions through voice commands and hand gestures, creating a natural and interactive human-computer experience.
+              It combines voice recognition, hand gesture detection, real-time system control, and AI-powered interaction to provide a smarter and more intuitive way of controlling a computer. 
+              Building this project strengthened my skills in Python, Computer Vision, Artificial Intelligence, Voice Recognition, and System Integration.
             </p>
 
             <div className="flagship-stack">
