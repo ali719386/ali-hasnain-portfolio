@@ -232,7 +232,7 @@
   }
   .hero-copy .eyebrow{
     display:inline-block !important;
-    font-size:11px !important;
+    font-size:13px !important;
     letter-spacing:0.02em !important;
     padding:5px 8px !important;
     white-space:nowrap !important;
@@ -245,7 +245,7 @@
 
 @media (max-width:400px){
   .hero-copy .eyebrow{
-    font-size:9.5px !important;
+    font-size:11px !important;
     padding:4px 6px !important;
     letter-spacing:0 !important;
   }
