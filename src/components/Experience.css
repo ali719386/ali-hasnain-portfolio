@@ -1,8 +1,5 @@
-.exp-cols{
-  display:grid;
-  grid-template-columns:1.5fr 1fr;
-  gap:64px;
-  align-items:start;
+.exp-log{
+  max-width:680px;
 }
 
 .exp-commit{
@@ -74,55 +71,4 @@
   border:1px solid var(--ink-line);
   border-radius:5px;
   padding:3px 8px;
-}
-
-.exp-edu{
-  background:var(--ink-panel);
-  border:1px solid var(--ink-line);
-  border-radius:12px;
-  padding:26px 24px;
-  position:sticky;
-  top:100px;
-}
-.exp-edu h4{
-  font-family:var(--font-mono);
-  font-size:12.5px;
-  text-transform:uppercase;
-  letter-spacing:.05em;
-  color:var(--text-on-ink-muted);
-  margin-bottom:20px;
-}
-.edu-item{
-  display:flex;
-  flex-direction:column;
-  padding:16px 0;
-  border-top:1px solid var(--ink-line);
-}
-.edu-item:first-of-type{ border-top:none; padding-top:0; }
-.edu-date{
-  font-family:var(--font-mono);
-  font-size:11.5px;
-  color:var(--amber);
-  margin-bottom:6px;
-}
-.edu-title{
-  font-size:15px;
-  font-weight:600;
-  color:var(--text-on-ink);
-}
-.edu-place{
-  font-size:13px;
-  color:var(--text-on-ink-muted);
-  margin-top:2px;
-}
-.edu-note{
-  font-size:12.5px;
-  color:var(--text-on-ink-muted);
-  margin-top:4px;
-  font-style:italic;
-}
-
-@media (max-width:900px){
-  .exp-cols{ grid-template-columns:1fr; gap:40px; }
-  .exp-edu{ position:static; }
 }

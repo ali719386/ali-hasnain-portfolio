@@ -25,7 +25,7 @@
    HERO COPY
 ================================ */
 .hero-copy h1{
-  font-size:clamp(30px, 5vw, 44px);
+  font-size:clamp(20px, 5vw, 44px);
   /* font-family:'Fraunces', Georgia, serif; */
   line-height:1.06;
   letter-spacing:-.01em;

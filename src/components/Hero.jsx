@@ -50,7 +50,7 @@ export default function Hero() {
       <div className="hero-glow" aria-hidden="true" />
       <div className="wrap hero-inner">
         <div className="hero-copy">
-          <span className="eyebrow">★ Full Stack Developer — Open To Work</span>
+          <span className="eyebrow">★ Full Stack Developer - Open To Work</span>
           <h1>
             Hello, I'm ALI HASNAIN<br />
             <span className="hero-role">
