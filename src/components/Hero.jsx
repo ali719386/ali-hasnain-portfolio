@@ -1,8 +1,50 @@
+import { useState, useEffect } from 'react';
 import './Hero.css';
 
-const WHATSAPP_LINK = 'https://wa.me/923057707321';
+const ROLES = ['Software Engineer', 'Full Stack Developer', 'Backend Developer', 'Python Developer'];
+
+const TYPING_SPEED = 200;      // ms per letter while typing
+const ERASING_SPEED = 80;     // ms per letter while erasing
+const PAUSE_AFTER_TYPE = 2000; // ms to wait after word is fully typed
 
 export default function Hero() {
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const [phase, setPhase] = useState('typing'); // 'typing' | 'pausing' | 'erasing'
+
+  useEffect(() => {
+    const currentWord = ROLES[roleIndex];
+
+    if (phase === 'typing') {
+      if (displayText.length < currentWord.length) {
+        const timeout = setTimeout(() => {
+          setDisplayText(currentWord.slice(0, displayText.length + 1));
+        }, TYPING_SPEED);
+        return () => clearTimeout(timeout);
+      } else {
+        const timeout = setTimeout(() => setPhase('pausing'), PAUSE_AFTER_TYPE);
+        return () => clearTimeout(timeout);
+      }
+    }
+
+    if (phase === 'pausing') {
+      const timeout = setTimeout(() => setPhase('erasing'), 0);
+      return () => clearTimeout(timeout);
+    }
+
+    if (phase === 'erasing') {
+      if (displayText.length > 0) {
+        const timeout = setTimeout(() => {
+          setDisplayText(currentWord.slice(0, displayText.length - 1));
+        }, ERASING_SPEED);
+        return () => clearTimeout(timeout);
+      } else {
+        setRoleIndex((prev) => (prev + 1) % ROLES.length);
+        setPhase('typing');
+      }
+    }
+  }, [displayText, phase, roleIndex]);
+
   return (
     <section className="hero" id="top">
       <div className="hero-glow" aria-hidden="true" />
@@ -10,8 +52,11 @@ export default function Hero() {
         <div className="hero-copy">
           <span className="eyebrow">★ Full Stack Developer — Open To Work</span>
           <h1>
-            Hello, I'm ALI HASNAIN.<br />
-            Software Engineer
+            Hello, I'm ALI HASNAIN<br />
+            <span className="hero-role">
+              {displayText}
+              <span className="hero-role-cursor" aria-hidden="true" />
+            </span>
           </h1>
           <p className="hero-lede">
            Backend &amp; Full-Stack Developer - Python, Django, FastAPI, REST APIs, React.
@@ -19,7 +64,7 @@ export default function Hero() {
            open to full-time roles in Pakistan.
           </p>
           <div className="hero-actions">
-        
+
           <a href="/cv/Ali_Hasnain_CV.pdf" className="btn btn-primary">
   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
     <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
@@ -49,7 +94,7 @@ export default function Hero() {
         </div>
 
 <div className="hero-photo-wrap">
-          
+
           <div className="hero-photo-card">
             <img src="/images/Ali image.jpg" alt="Ali Hasnain" className="hero-photo" />
           </div>

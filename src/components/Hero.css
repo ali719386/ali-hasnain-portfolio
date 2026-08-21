@@ -33,6 +33,27 @@
   color:var(--text-on-ink);
 }
 .hero-accent{ color:var(--amber); font-style:italic; }
+
+/* --- Rotating role text (typewriter) --- */
+.hero-role{
+  display:inline-block;
+  color:var(--amber);
+  min-height:1.1em;
+}
+.hero-role-cursor{
+  display:inline-block;
+  width:2px;
+  height:0.95em;
+  margin-left:3px;
+  background:var(--amber);
+  vertical-align:-0.12em;
+  animation:cursor-blink .8s step-end infinite;
+}
+@keyframes cursor-blink{
+  0%, 100%{ opacity:1; }
+  50%{ opacity:0; }
+}
+
 .hero-lede{
   margin-top:24px;
   max-width:480px;
