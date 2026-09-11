@@ -95,7 +95,7 @@ export default function Hero() {
           <div className="hero-meta">
             <div><span className="hero-meta-num">2+</span> internships shipped</div>
             <div><span className="hero-meta-num">3.51</span> CGPA / BSSE</div>
-            <div><span className="hero-meta-num">FAISALABAD</span> Open To Work</div>
+            <div><span className="hero-meta-num">Pakistan</span> Open To Work</div>
           </div>
         </div>
 

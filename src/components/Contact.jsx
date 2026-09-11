@@ -56,7 +56,7 @@ export default function Contact() {
           <h3 className="contact-subheading">Get in touch with me</h3>
           <p className="contact-lede">
             Open to full-time backend / full-stack roles in Pakistan, and freelance work.
-            Faisalabad-based, happy to relocate to Lahore for the right on-site role.
+            Faisalabad-based, happy to relocate for on-site roles.
           </p>
         </div>
 
