@@ -5,8 +5,7 @@ const EDU = [
     date: 'Oct 2022 - Jun 2026',
     title: 'BS Software Engineering',
     place: 'Riphah International University, Faisalabad',
-    logo:
-      'https://media.licdn.com/dms/image/v2/C4E0BAQEeXNh2AieAdw/company-logo_100_100/company-logo_100_100/0/1631329416941?e=1788998400&v=beta&t=Ra4xHJJtXjyjzR6WvWjO9rWa3XX7gfIhod6RcVNqhY0',
+    logo: '/images/Riphah.jpg',
     note: 'CGPA 3.51 · Completed',
   },
 
@@ -32,12 +31,21 @@ const CERTIFICATIONS = [
     date: 'Apr 2025',
     title: 'Web Development',
     issuer: 'TecnSol Trainings Official',
-    logo:
-      'https://media.licdn.com/dms/image/v2/C4E0BAQG9UESRIYlRvQ/company-logo_100_100/company-logo_100_100/0/1630655350308?e=1788998400&v=beta&t=wK569CKtjF1TbgdESlGuYjkvvIZV5wGWlYyhHs2zpGw',
+    logo: '/images/Tecnsol.jpg',
     skills: [
       'HTML5',
       'CSS',
       'JavaScript',
+      'Bootstrap',
+      'Python',
+      'Django',
+      'Flask',
+      'SQL',
+      'MongoDB',
+      'React',
+      'Node.js',
+      'Express',
+      'RESTful APIs',
       'Web Development',
     ],
   },
@@ -46,8 +54,7 @@ const CERTIFICATIONS = [
     date: 'Jan 2025',
     title: 'IT Essentials',
     issuer: 'Cisco',
-    logo:
-      'https://media.licdn.com/dms/image/v2/D560BAQFYnR_Zrm87Dg/company-logo_100_100/B56ZnMyVr4HUAQ-/0/1760077372453/cisco_logo?e=1788998400&v=beta&t=Qnm2P-rXpCVP_O5yQkoMzgv3TvAn9E1eeP01tKmHKhI',
+    logo: '/images/cisco.jpg',
     skills: [
       'Networking',
       'Hardware',
@@ -60,8 +67,7 @@ const CERTIFICATIONS = [
     date: 'Aug 2025 — Sep 2025',
     title: 'Python Developer',
     issuer: 'Code Sentinel',
-    logo:
-      'https://media.licdn.com/dms/image/v2/D4D0BAQHT3j0WeCnPTQ/company-logo_100_100/B4DZe6VG9ZG8AQ-/0/1751177785595?e=1788998400&v=beta&t=Yf1vO9V3Dl5lJ0wscPIWrtUAsL9jgKI6TDg6lG_D5mo',
+    logo: '/images/code.jpg',
     skills: [
       'Python',
       'OOP',
@@ -159,6 +165,7 @@ export default function Education() {
                       <span
                         className="edu-logo-fallback"
                         aria-hidden="true"
+                        style={{ display: 'none' }}
                       >
                         🎓
                       </span>
@@ -233,11 +240,33 @@ export default function Education() {
 
                   {cert.logo ? (
 
-                    <img
-                      src={cert.logo}
-                      alt={`${cert.issuer} logo`}
-                      className="cert-logo"
-                    />
+                    <>
+                      <img
+                        src={cert.logo}
+                        alt={`${cert.issuer} logo`}
+                        className="cert-logo"
+                        onError={(event) => {
+                          event.currentTarget.style.display = 'none';
+
+                          const fallback =
+                            event.currentTarget.parentElement.querySelector(
+                              '.cert-logo-fallback'
+                            );
+
+                          if (fallback) {
+                            fallback.style.display = 'flex';
+                          }
+                        }}
+                      />
+
+                      <span
+                        className="cert-logo-fallback"
+                        aria-hidden="true"
+                        style={{ display: 'none' }}
+                      >
+                        🏢
+                      </span>
+                    </>
 
                   ) : (
 
