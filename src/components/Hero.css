@@ -162,12 +162,12 @@
   display:flex;
   align-items:center;
   justify-content:center;
-  transform: translateY(-45px);
+  transform: translateY(-55px);
 }
 .hero-photo-card{
   position:relative;
   width:320px;
-  height:300px;
+  height:280px;
   border-radius:26px;
   padding:6px;
   background:var(--ink-panel-2);
@@ -226,6 +226,18 @@
   .hero-lede{
     font-size:13px !important;
   }
+  .hero-meta{
+    flex-wrap:nowrap;
+    gap:10px;
+    font-size:10px;
+    justify-content:space-between;
+  }
+  .hero-meta > div{
+    white-space:nowrap;
+  }
+  .hero-meta-num{
+    font-size:14px;
+  }
 }
 
 @media (max-width:400px){
@@ -236,5 +248,12 @@
   }
   .hero-lede{
     font-size:12px !important;
+  }
+  .hero-meta{
+    gap:6px;
+    font-size:9px;
+  }
+  .hero-meta-num{
+    font-size:12px;
   }
 }

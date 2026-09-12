@@ -131,7 +131,7 @@
 
 .about-photo-flip {
   width: 100%;
-  aspect-ratio: 3 / 2.8; /* was 3/4 — box now matches the visible 70%-tall photo, no dead space below it */
+  aspect-ratio: 3 / 2.5; /* was 3/4 — matches the mobile/tablet trim so desktop shows the same crop */
   cursor: pointer;
   perspective: 1400px;
 }
@@ -139,7 +139,7 @@
 .about-photo-inner {
   position: relative;
   width: 100%;
-  height: 100%; /* fills the (now correctly-sized) box — photo's visible size is unchanged */
+  height: 100%;
   transition: transform 0.65s cubic-bezier(.4, .2, .2, 1);
   transform-style: preserve-3d;
 }
@@ -167,7 +167,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 12%;
+  object-position: center top;
   display: block;
 }
 
@@ -562,8 +562,8 @@
   }
 
   .about-photo-flip {
-    width: 96px;
-    aspect-ratio: 1 / 0.7; /* was 1/1 — matches visible 70%-tall photo, no dead space */
+    width: 80px;
+    aspect-ratio: 3 / 3.5; /* was 3/4 — slightly shorter, trims a bit off the bottom */
     flex: none;
   }
 
@@ -655,8 +655,8 @@
   }
 
   .about-photo-flip {
-    width: 140px;
-    aspect-ratio: 1 / 0.7; /* was 1/1 — matches visible 70%-tall photo, no dead space */
+    width: 115px;
+    aspect-ratio: 3 / 2.5; /* was 3/3.5 — matches the tablet trim so it actually applies on phones */
   }
 
 
