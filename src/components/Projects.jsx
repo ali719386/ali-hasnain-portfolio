@@ -35,10 +35,10 @@ const PROJECTS = [
     github: 'https://github.com/ali719386/ecommerce-website-django',
   },
   {
-    name: 'Todo List Application',
-    desc: 'Task manager pairing a Next.js frontend with a Django + PostgreSQL backend.',
-    stack: ['Next.js', 'Django', 'PostgreSQL'],
-    github: 'https://github.com/ali719386/todo-app',
+    name: 'KILN - Coffee Shop Website',
+    desc: 'Fully animated coffee shop site with an interactive menu, cart, and WhatsApp/Email ordering, built around cinematic hero animations.',
+    stack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+    github: 'https://github.com/ali719386/kiln-coffee',
   },
   {
     name: 'Gourmet Management System',

@@ -156,20 +156,37 @@
 }
 
 /* ================================
-   HERO PHOTO — simple, clean card
+   HERO PHOTO — attractive square card
 ================================ */
 .hero-photo-wrap{
   display:flex;
   align-items:center;
   justify-content:center;
-  transform: translateY(-30px);
+  transform: translateY(-45px);
+}
+.hero-photo-card{
+  position:relative;
+  width:320px;
+  height:300px;
+  border-radius:26px;
+  padding:6px;
+  background:var(--ink-panel-2);
+  border:1px solid var(--ink-line);
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.hero-photo-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 40px 70px -18px rgba(0,0,0,0.65);
 }
 .hero-photo{
   width:100%;
-  max-width:360px;
-  height:auto;
+  height:100%;
   display:block;
-  filter:drop-shadow(0 20px 34px rgba(0,0,0,0.45));
+  object-fit:cover;
+  object-position: top center;
+  border-radius:22px;
+  background:var(--ink-panel);
 }
 
 /* ================================
@@ -179,7 +196,8 @@
   .hero-inner{ grid-template-columns:1fr; }
   .hero{ padding:140px 0 80px; }
   .hero-photo-wrap{ min-height:auto; margin-top:12px; transform: translateY(-15px); }
-  .hero-photo{ max-width:280px; }
+  .hero-photo-card{ width:260px; height:230px; border-radius:22px; }
+  .hero-photo{ border-radius:17px; }
 }
 
 @media (max-width:600px){

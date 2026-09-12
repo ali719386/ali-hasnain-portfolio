@@ -102,7 +102,7 @@ export default function Hero() {
 <div className="hero-photo-wrap">
 
           <div className="hero-photo-card">
-            <img src="/images/Ali image.jpeg" alt="Ali Hasnain" className="hero-photo" />
+            <img src="/images/Ali image.png" alt="Ali Hasnain" className="hero-photo" />
           </div>
         </div>
       </div>

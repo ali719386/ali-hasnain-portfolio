@@ -54,7 +54,7 @@ export default function About() {
             >
               <div className={`about-photo-inner${flipped ? ' is-flipped' : ''}`}>
                 <div className="about-photo-face about-photo-front">
-                  <img src="/images/Ali image.jpeg" alt="Ali Hasnain" />
+                  <img src="/images/Ali image.png" alt="Ali Hasnain" />
                 </div>
                 <div className="about-photo-face about-photo-back">
                   <span className="about-photo-back-name">Ali Hasnain</span>
